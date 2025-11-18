@@ -1,2 +1,6 @@
-# ai_devtools_homework
-Repository for the AI devtools zoomcamp training
+# AI DevTools Zoomcamp: Homework repository
+
+Repository for the AI devtools zoomcamp training by DataTalks group.
+
+Homework submission to be tracked here: https://courses.datatalks.club/ai-dev-tools-2025/
+
