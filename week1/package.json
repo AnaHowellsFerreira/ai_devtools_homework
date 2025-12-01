@@ -9,7 +9,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "keywords": ["snake", "game", "react"],
+  "keywords": [
+    "snake",
+    "game",
+    "react"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
