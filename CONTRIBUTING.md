@@ -4,30 +4,46 @@ This document outlines the conventions and workflow for organizing weekly homewo
 
 ## 📁 Repository Structure
 
-Each week's project lives in its own directory:
+Each week's content is organized into subdirectories for exercises and homework:
 
 ```
 ai_devtools_homework/
-├── week1/              # Week 1-2 project
-├── week2/              # Week 2 project
-├── week3/              # Week 3 project
+├── week1/
+│   ├── exercise/       # Practice exercise
+│   ├── homework/       # Homework assignment
+│   └── README.md       # Week overview
+├── week2/              # Future weeks
 ├── TEMPLATE/           # Template for new projects
 ├── README.md           # Main repository documentation
 └── CONTRIBUTING.md     # This file
 ```
 
+## 📂 Week Structure
+
+Each week may contain:
+- **`exercise/`** - Practice exercise to learn concepts
+- **`homework/`** - Required homework assignment
+- **`README.md`** - Overview of the week's content
+
+Both exercise and homework are independent React projects with their own dependencies.
+
 ## 🚀 Starting a New Week's Project
 
-### Option 1: Using the TEMPLATE
+### Option 1: Using the TEMPLATE (For Exercise or Homework)
 
 1. **Copy the template directory:**
    ```bash
-   cp -r TEMPLATE/ weekX/
-   cd weekX/
+   # For a new week's exercise
+   cp -r TEMPLATE/ weekX/exercise/
+   cd weekX/exercise/
+   
+   # OR for homework
+   cp -r TEMPLATE/ weekX/homework/
+   cd weekX/homework/
    ```
 
 2. **Update the project details:**
-   - Edit `package.json`: Change `name` to `weekX-project-name`
+   - Edit `package.json`: Change `name` to `weekX-exercise` or `weekX-homework`
    - Edit `README.md`: Replace `[Project Name]` and fill in objectives
    - Edit `public/index.html`: Update title
    - Edit `src/App.js`: Update header text
@@ -46,8 +62,8 @@ ai_devtools_homework/
 
 1. **Create the directory:**
    ```bash
-   mkdir weekX/
-   cd weekX/
+   mkdir -p weekX/exercise/  # or weekX/homework/
+   cd weekX/exercise/
    ```
 
 2. **Initialize your project** (React, Node.js, Python, etc.)
@@ -58,10 +74,16 @@ ai_devtools_homework/
    - Setup instructions
    - Features/objectives
 
+4. **Create a week overview README** at `weekX/README.md` explaining both exercise and homework
+
 ## 📝 Naming Conventions
 
-- **Directory names:** Use `week1/`, `week2/`, `week3/`, etc.
-- **Package names:** Use format `weekX-project-description` (e.g., `week1-snake-game`)
+- **Directory names:** 
+  - Weekly folders: `week1/`, `week2/`, `week3/`, etc.
+  - Subdirectories: `exercise/`, `homework/`
+- **Package names:** 
+  - Exercise: `weekX-exercise-name` (e.g., `week1-snake-game`)
+  - Homework: `weekX-homework-name` (e.g., `week1-todo-app`)
 - **Branch names:** Use `week-X-feature-name` if working on branches
 
 ## ✅ Project Checklist
@@ -69,10 +91,11 @@ ai_devtools_homework/
 Before considering a week's project complete, ensure:
 
 - [ ] Project runs successfully (`npm start` or equivalent)
-- [ ] README.md exists with clear documentation
+- [ ] README.md exists with clear documentation (for both exercise and homework)
+- [ ] Week overview README.md exists at `weekX/README.md`
 - [ ] Dependencies are listed in package.json
 - [ ] Project-specific .env files are in the project directory (not root)
-- [ ] Main repository README.md is updated with project link and description
+- [ ] Main repository README.md is updated with project links
 - [ ] Code is committed with meaningful commit messages
 
 ## 📚 Documentation Standards

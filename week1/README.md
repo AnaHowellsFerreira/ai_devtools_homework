@@ -1,50 +1,61 @@
-# Week 1-2: Snake Game
+# Week 1-2: Snake Game & TODO App
 
-A classic Snake game built with React for the AI DevTools Zoomcamp.
+This week includes both an exercise and a homework assignment to practice building applications with AI-assisted development tools.
 
-## 🎮 Game Features
+## 📁 Structure
 
-- **Grid:** 20x20 cells
-- **Controls:** Arrow keys to move the snake
-- **Objective:** Eat food to grow longer and increase your score
-- **Game Over:** Avoid hitting walls or yourself
-- **Pause:** Press 'P' to pause/unpause
-
-## 🛠️ Tech Stack
-
-- React 18.2.0
-- JavaScript
-- CSS
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 14.18+ (recommended: 16 or 18)
-
-### Installation
-
-```bash
-npm install
+```
+week1/
+├── exercise/          # Snake Game (Practice)
+│   ├── README.md
+│   ├── package.json
+│   └── src/
+└── homework/          # TODO App (Assignment)
+    ├── README.md
+    ├── package.json
+    └── src/
 ```
 
-### Run Development Server
+## 🎮 Exercise: Snake Game
 
+**Directory:** [`exercise/`](./exercise/)  
+**Purpose:** Practice exercise to get familiar with React and AI-assisted development  
+**Tech Stack:** React, JavaScript
+
+Classic Snake game where you control a snake using arrow keys. The goal is to eat food, grow longer, and avoid collisions with walls or yourself.
+
+**Run the exercise:**
 ```bash
+cd exercise
+npm install
 npm start
 ```
 
-The game will open at [http://localhost:3000](http://localhost:3000)
+## ✅ Homework: TODO App
 
-### Build for Production
+**Directory:** [`homework/`](./homework/)  
+**Purpose:** Week 1-2 homework assignment  
+**Tech Stack:** React, JavaScript  
+**Goal:** Build a TODO application using LLM-assisted boilerplate code generation
 
+Create a functional TODO app that allows users to add, complete, and delete tasks.
+
+**Run the homework:**
 ```bash
-npm run build
+cd homework
+npm install
+npm start
 ```
 
-## 📝 Notes
+## 🎓 Learning Objectives
 
-If you encounter ESLint errors with older Node versions, the `.env` file contains `DISABLE_ESLINT_PLUGIN=true` to bypass compatibility issues.
+- Practice using AI tools for code generation
+- Build React applications from scratch
+- Manage state and user interactions
+- Understand component architecture
+- Work with forms and lists
 
-## 🎓 Assignment Context
+## 📚 Resources
 
-This project was created as part of Week 1-2 homework for the AI DevTools Zoomcamp, focusing on building applications with LLM-assisted code generation.
+- [Course Materials](https://courses.datatalks.club/ai-dev-tools-2025/)
+- [React Documentation](https://react.dev/)

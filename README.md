@@ -44,9 +44,11 @@ Each week's project is organized in its own directory with independent dependenc
 
 ```
 ai_devtools_homework/
-├── week1/              # Week 1-2: Snake Game (React)
-├── week2/              # Week 2: TODO App (Coming soon)
-├── week3/              # Week 3: TBD
+├── week1/
+│   ├── exercise/       # Snake Game (Practice)
+│   └── homework/       # TODO App (Assignment)
+├── week2/              # Week 2 projects
+├── week3/              # Week 3 projects
 ├── TEMPLATE/           # Project template for new weeks
 ├── README.md           # This file
 └── CONTRIBUTING.md     # Project setup guide
@@ -54,27 +56,41 @@ ai_devtools_homework/
 
 ## 📚 Weekly Projects
 
-### Week 1-2: Snake Game
-**Directory:** [`week1/`](./week1/)  
+### Week 1-2: Snake Game (Exercise) & TODO App (Homework)
+
+**Directory:** [`week1/`](./week1/)
+
+#### Exercise: Snake Game
+**Location:** [`week1/exercise/`](./week1/exercise/)  
 **Tech Stack:** React, JavaScript  
 **Description:** Classic Snake game built with React. Control the snake with arrow keys, eat food to grow, and avoid collisions.
 
 **Run:**
 ```bash
-cd week1
+cd week1/exercise
 npm install
 npm start
 ```
 
-### Week 2: TODO App
+#### Homework: TODO App
+**Location:** [`week1/homework/`](./week1/homework/)  
+**Tech Stack:** React, JavaScript  
 **Status:** 🚧 In Progress  
-**Goal:** Create a TODO application using LLM-assisted boilerplate code generation.
+**Description:** Create a TODO application using LLM-assisted boilerplate code generation.
+
+**Run:**
+```bash
+cd week1/homework
+npm install
+npm start
+```
 
 ### Week 3+
+
 **Status:** 📝 Coming Soon
 
 ## 🔗 Resources
 
-- **Course Link:** https://courses.datatalks.club/ai-dev-tools-2025/
+- **Course Link:** <https://courses.datatalks.club/ai-dev-tools-2025/>
 - **Homework Tracking:** Check the course website for submission guidelines
 
