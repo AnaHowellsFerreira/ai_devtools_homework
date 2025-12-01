@@ -74,15 +74,15 @@ npm start
 
 #### Homework: TODO App
 **Location:** [`week1/homework/`](./week1/homework/)  
-**Tech Stack:** React, JavaScript  
-**Status:** 🚧 In Progress  
-**Description:** Create a TODO application using LLM-assisted boilerplate code generation.
+**Tech Stack:** Python, Django, Django REST Framework  
+**Status:** ✅ Complete  
+**Description:** RESTful TODO API built with Django. Supports full CRUD operations with pagination and admin interface.
 
 **Run:**
 ```bash
 cd week1/homework
-npm install
-npm start
+source venv/bin/activate
+python manage.py runserver
 ```
 
 ### Week 3+

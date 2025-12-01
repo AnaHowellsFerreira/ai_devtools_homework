@@ -1,0 +1,84 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %}{% if todo %}Edit{% else %}Create{% endif %} TODO{% endblock %}
+
+{% block header %}{% if todo %}Edit{% else %}Create New{% endif %} TODO{% endblock %}
+
+{% block content %}
+<style>
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        width: auto;
+    }
+
+    .form-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+</style>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="title">Title *</label>
+        <input type="text" id="title" name="title" value="{{ todo.title|default:'' }}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description">{{ todo.description|default:'' }}</textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="due_date">Due Date</label>
+        <input type="date" id="due_date" name="due_date" value="{{ todo.due_date|date:'Y-m-d'|default:'' }}">
+    </div>
+
+    {% if todo %}
+    <div class="form-group">
+        <div class="checkbox-group">
+            <input type="checkbox" id="resolved" name="resolved" {% if todo.resolved %}checked{% endif %}>
+            <label for="resolved" style="margin: 0;">Mark as resolved</label>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="form-actions">
+        <button type="submit" class="btn">{% if todo %}Update{% else %}Create{% endif %} TODO</button>
+        <a href="{% url 'todo_list' %}" class="btn" style="background: #6c757d;">Cancel</a>
+    </div>
+</form>
+{% endblock %}

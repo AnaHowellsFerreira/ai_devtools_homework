@@ -35,16 +35,16 @@ npm start
 
 **Directory:** [`homework/`](./homework/)  
 **Purpose:** Week 1-2 homework assignment  
-**Tech Stack:** React, JavaScript  
+**Tech Stack:** Python, Django, Django REST Framework  
 **Goal:** Build a TODO application using LLM-assisted boilerplate code generation
 
-Create a functional TODO app that allows users to add, complete, and delete tasks.
+Create a functional TODO API with Django that allows users to create, read, update, and delete tasks.
 
 **Run the homework:**
 ```bash
 cd homework
-npm install
-npm start
+source venv/bin/activate  # Activate virtual environment
+python manage.py runserver
 ```
 
 ## 🎓 Learning Objectives
